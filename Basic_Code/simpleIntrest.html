@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Intrest</title>
+    </head>
+<body>
+    <h1>Simple Intrest</h1>
+    Enter principal amount:<input type="text" id="principal"><br>
+    Enter rate of intrest:<input type="text" id="rate"><br>
+    Enter time(in years):<input type="text" id="time"><br>
+    <button onclick="calculateIntrest()">Calculate Intrest</button><br>
+    <h3 id="intrestResult"></h3>
+    <script>
+        function calculateIntrest(){
+            var principal=document.getElementById("principal").value;
+            var rate=document.getElementById("rate").value;
+            var time=document.getElementById("time").value;
+            var intrest=(principal*rate*time)/100;
+            document.getElementById("intrestResult").textContent="The simple intrest for principal amount "+principal+" at rate of intrest "+rate+" for "+time+" years is "+intrest;
+        }
+
+    </script>
+</body>
+</html>

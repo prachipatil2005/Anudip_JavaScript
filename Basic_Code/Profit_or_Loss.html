@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profit or Loss Calculations</title>
+</head>
+<body>
+<h1>Profit or Loss</h1>
+Enter cost Price:<input type="text" id="costPrice"><br/>
+Enter selling Price:<input type="text" id="sellingPrice"><br/>
+<button onclick="calculateProfitOrLoss()">Calculate Profit or Loss</button><br/>
+<h3 id="result"></h3>
+<script>
+    function calculateProfitOrLoss(){
+        var costPrice=document.getElementById("costPrice").value;
+        var sellingPrice=document.getElementById("sellingPrice").value;
+         costPrice=parseFloat(costPrice);
+         sellingPrice=parseFloat(sellingPrice);
+        if(sellingPrice>costPrice){
+            var profit=sellingPrice-costPrice;
+            document.getElementById("result").textContent="The profit is "+profit;
+            
+        }else if(costPrice>sellingPrice){
+            var loss=costPrice-sellingPrice;
+            document.getElementById("result").textContent="The loss is "+loss;
+    }
+    else{
+        document.getElementById("result").textContent="No profit no loss";      
+    }
+}
+</script>
+</body>
+    
+</html>
